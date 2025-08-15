@@ -10,3 +10,6 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# About
+This is the homepage design for a sweets shop website, built using **React** and **Tailwind CSS**. The project demonstrates a modern, responsive layout with a clean and visually appealing design suitable for an online sweets shop. 

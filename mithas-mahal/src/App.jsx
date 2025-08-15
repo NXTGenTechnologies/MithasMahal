@@ -1,4 +1,4 @@
-import { useState } from 'react'
+/*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -32,4 +32,30 @@ function App() {
   )
 }
 
-export default App
+export default App*/
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Features from './components/Features';
+import Products from './components/Products';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Hero />
+      <About />
+      <Features />
+      <Products title="Sweets" id="sweets" />
+      <Products title="Savories" id="savories" />
+      <Products title="Bakes" id="bakes" />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
