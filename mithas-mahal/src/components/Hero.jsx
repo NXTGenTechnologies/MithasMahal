@@ -1,4 +1,4 @@
-simport React from 'react';
+import React from 'react';
 import heroImage from '../assets/images/sweets.jpg';
 
 const Hero = () => {
