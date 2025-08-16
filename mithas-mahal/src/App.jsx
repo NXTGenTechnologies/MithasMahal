@@ -50,7 +50,7 @@ function App() {
       <About />
       <Features />
       <Products title="Sweets" id="sweets" />
-      <Products title="Savories" id="savories" />
+      <Products title="Savories" id="savouries" />
       <Products title="Bakes" id="bakes" />
       <Contact />
       <Footer />
