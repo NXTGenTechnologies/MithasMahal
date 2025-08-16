@@ -1,6 +1,6 @@
 import React from 'react';
 import laddu from '/images/sweets/laddu.webp';
-import rasu from '/images/rasugulla.webp';
+import rasu from '/images/rasgulla.webp';
 import soan from '/images/soan-papdi.webp';
 import kaju from '/images/kajukatli.webp';
 import mys from '/images/mysorepak.webp';
