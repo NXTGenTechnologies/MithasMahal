@@ -6,7 +6,7 @@ const Header = () => {
       <div className="text-2xl font-serif text-yellow-700 font-bold">Mithas Mahal</div>
       <ul className="flex gap-6">
         <li><a href="#sweets" className="hover:text-green-600">Sweets</a></li>
-        <li><a href="#savories" className="hover:text-green-600">Savories</a></li>
+        <li><a href="#savouries" className="hover:text-green-600">Savories</a></li>
         <li><a href="#bakes" className="hover:text-green-600">Bakes</a></li>
         <li><a href="#contact" className="hover:text-green-600">Contact</a></li>
       </ul>
