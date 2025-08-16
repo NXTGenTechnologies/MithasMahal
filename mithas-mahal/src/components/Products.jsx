@@ -1,31 +1,19 @@
 import React from 'react';
-import laddu from '/images/sweets/laddu.webp';
-import rasu from '/images/sweets/rasgulla.webp';
-import soan from '/images/sweets/soan-papdi.webp';
-import kaju from '/images/sweets/kajukatli.webp';
-import mys from '/images/sweets/mysorepak.webp';
-import dal from '/images/savouries/DaalSamosa.webp'
-import nendram from '/images/savouries/NendramChips.webp'
-import spicy from '/images/savouries/SpicyMurkku.webp'
-import thathai from '/images/savouries/Thatthai.webp'
-import cream from '/images/bakes/CreamRoll.webp'
-import ghee from '/images/bakes/Ghee-Cake.webp'
-import banana from '/images/bakes/BANANACAKE.webp'
-import jam from '/images/bakes/jam-roll.webp'
+
 const products = [
-  { id: 1, name: 'Motichoor Laddu', price: 'Rs 200', img: laddu },
-  { id: 2, name: 'Rasgulla', price: 'Rs 180', img: rasu },
-  { id: 3, name: 'Soan Papadi', price: 'Rs 99', img: soan },
-  { id: 4, name: 'Kaju katli', price: 'Rs 140', img: kaju },
-  { id: 5, name: 'Mysore pak', price: 'Rs 110', img: mys },
-  { id: 6, name: 'Daal Samosa', price: 'Rs 120', img: dal },
-  { id: 7, name: 'Nendram Chips', price: 'Rs 90', img: nendram },
-  { id: 8, name: 'Spicy Murukku', price: 'Rs 150', img: spicy },
-  { id: 9, name: 'Thatthai', price: 'Rs 100', img: thathai},
-  { id: 10, name: 'Cream Roll', price: 'Rs 130', img: cream },
-  { id: 11, name: 'Ghee Cake', price: 'Rs 160', img: ghee },
-  { id: 12, name: 'Banana Cake', price: 'Rs 170', img: banana },
-  { id: 13, name: 'Jam Roll', price: 'Rs 140', img: jam },
+  { id: 1, name: 'Motichoor Laddu', price: 'Rs 200', img: '/images/sweets/laddu.webp' },
+  { id: 2, name: 'Rasgulla', price: 'Rs 180', img: '/images/sweets/rasgulla.webp' },
+  { id: 3, name: 'Soan Papadi', price: 'Rs 99', img: '/images/sweets/soan-papdi.webp' },
+  { id: 4, name: 'Kaju katli', price: 'Rs 140', img: '/images/sweets/kajukatli.webp' },
+  { id: 5, name: 'Mysore pak', price: 'Rs 110', img: '/images/sweets/mysorepak.webp' },
+  { id: 6, name: 'Daal Samosa', price: 'Rs 120', img: '/images/savouries/DaalSamosa.webp' },
+  { id: 7, name: 'Nendram Chips', price: 'Rs 90', img: '/images/savouries/NendramChips.webp' },
+  { id: 8, name: 'Spicy Murukku', price: 'Rs 150', img: '/images/savouries/SpicyMurkku.webp' },
+  { id: 9, name: 'Thatthai', price: 'Rs 100', img: '/images/savouries/Thatthai.webp' },
+  { id: 10, name: 'Cream Roll', price: 'Rs 130', img: '/images/bakes/CreamRoll.webp' },
+  { id: 11, name: 'Ghee Cake', price: 'Rs 160', img: '/images/bakes/Ghee-Cake.webp' },
+  { id: 12, name: 'Banana Cake', price: 'Rs 170', img: '/images/bakes/BANANACAKE.webp' },
+  { id: 13, name: 'Jam Roll', price: 'Rs 140', img: '/images/bakes/jam-roll.webp' },
 ];
 
 const Products = ({ title, id }) => {
@@ -35,7 +23,6 @@ const Products = ({ title, id }) => {
       <div className="flex overflow-x-auto gap-4">
         {products.map(p => (
           <div key={p.id} className="flex-none w-44 bg-white rounded-lg shadow p-4 text-center">
-            {/* Use the imported image directly */}
             <img src={p.img} alt={p.name} className="w-full h-32 object-cover rounded mb-2"/>
             <h4 className="font-semibold">{p.name}</h4>
             <p>{p.price}</p>
@@ -48,4 +35,5 @@ const Products = ({ title, id }) => {
 };
 
 export default Products;
+
 
