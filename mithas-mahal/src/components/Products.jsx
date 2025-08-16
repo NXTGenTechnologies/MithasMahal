@@ -10,7 +10,7 @@ const products = [
   { id: 6, name: 'Daal Samosa', price: 'Rs 120', img: '/images/savouries/DaalSamosa.jpg', category: 'Savouries' },
   { id: 7, name: 'Nendram Chips', price: 'Rs 90', img: '/images/savouries/NendramChips.jpg', category: 'Savouries' },
   { id: 8, name: 'Spicy Murukku', price: 'Rs 150', img: '/images/savouries/SpicyMurkku.webp', category: 'Savouries' },
-  { id: 9, name: 'Thatthai', price: 'Rs 100', img: '/images/savouries/Thatthai.webp', category: 'Savouries' },
+  { id: 9, name: 'Thatthai', price: 'Rs 100', img: '/images/savouries/Thattai.webp', category: 'Savouries' },
 
   { id: 10, name: 'Cream Roll', price: 'Rs 130', img: '/images/bakes/CreamRoll.jpg', category: 'Bakes' },
   { id: 11, name: 'Ghee Cake', price: 'Rs 160', img: '/images/bakes/Ghee-Cake.jpg', category: 'Bakes' },
