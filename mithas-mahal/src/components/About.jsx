@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImg from '/images/all-sweets.webp';
+import aboutImg from '/images/mithas-mahal.jpg';
 
 const About = () => {
   return (
