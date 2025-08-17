@@ -5,7 +5,16 @@ import { FiMenu, FiX, FiSearch, FiUser, FiShoppingCart } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const navItems = ["Home", "Sweets", "Savouries", "Bakes", "About Us", "Contact Us"];
+/*const navItems = ["Home", "Sweets", "Savouries", "Bakes", "About Us", "Contact Us"];*/
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "Sweets", href: "/#sweets" },
+  { name: "Savouries", href: "/#savouries" },
+  { name: "Bakes", href: "/#bakes" },
+  { name: "About Us", href: "/aboutus" },
+  { name: "Contact Us", href: "/#contact" },
+];
+
 
 const itemVariants = {
   hidden: { opacity: 0, y: -10 },
