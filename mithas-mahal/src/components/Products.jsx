@@ -25,14 +25,14 @@ const Products = ({ title, id }) => {
     <section className="py-12 px-4">
       <h2 id={id} className="text-3xl text-green-600 mb-6 text-center">{title}</h2>
       
-      {/* Make products center aligned */}
+      
       <div className="flex justify-center flex-wrap gap-6">
         {filteredProducts.map(p => (
           <div 
             key={p.id} 
             className="w-44 bg-white rounded-lg shadow p-4 text-center transform transition duration-300 hover:scale-105 hover:shadow-lg"
           >
-            {/* Image zoom + smooth hover animation */}
+            
             <img 
               src={p.img} 
               alt={p.name} 
@@ -46,9 +46,7 @@ const Products = ({ title, id }) => {
       </div>
     </section>
   );
-};*/
-
-export default Products;
+};/*export default Products;*/
 import React from 'react';
 
 const products = [
