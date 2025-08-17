@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -36,4 +36,89 @@ function App() {
   );
 }
 
+export default App;*/
+import React from 'react';
+import { Routes, Route } from "react-router-dom";
+import { motion } from "framer-motion"; 
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Features from './components/Features';
+import Products from './components/Products';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Hero />
+              </motion.div>
+
+             
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Features />
+              </motion.div>
+
+              
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Products title="Sweets" id="sweets" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <Products title="Savouries" id="savouries" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <Products title="Bakes" id="bakes" />
+              </motion.div>
+
+             
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Contact />
+              </motion.div>
+            </>
+          }
+        />
+
+       <Route path="/aboutus" element={<About />} />
+            </Routes>
+
+      <Footer />
+    </div>
+  );
+}
+
 export default App;
+
