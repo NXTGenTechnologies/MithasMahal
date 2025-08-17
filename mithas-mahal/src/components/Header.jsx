@@ -27,6 +27,17 @@ const itemVariants = {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const handleScroll = (e, href) => {
+    if (href.includes("#")) {
+      e.preventDefault();
+      const id = href.split("#")[1];
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header className="bg-transparent border-b border-amber-100 shadow-sm top-0 z-50">
@@ -57,12 +68,22 @@ const Header = () => {
                 animate="visible"
                 variants={itemVariants}
               >
-                <Link
-                  to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
-                  className="text-neutral-900 active:text-amber-800 hover:text-[#9c7e38] transition"
-                >
-                  {item}
-                </Link>
+                  {item.href.startsWith("/") && !item.href.includes("#") ? (
+                  <Link
+                    to={item.href}
+                    className="text-neutral-900 hover:text-[#9c7e38] transition"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    onClick={(e) => handleScroll(e, item.href)}
+                    className="text-neutral-900 hover:text-[#9c7e38] transition cursor-pointer"
+                  >
+                    {item.name}
+                  </a>
+                )}
               </motion.div>
             ))}
           </nav>
@@ -94,13 +115,23 @@ const Header = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <Link
-                    to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
-                    className="text-gray-900 hover:text-[#9c7e38] font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </Link>
+                    {item.href.startsWith("/") && !item.href.includes("#") ? (
+                    <Link
+                      to={item.href}
+                      className="text-gray-900 hover:text-[#9c7e38] font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <a
+                      href={item.href}
+                      onClick={(e) => handleScroll(e, item.href)}
+                      className="text-gray-900 hover:text-[#9c7e38] font-medium cursor-pointer"
+                    >
+                      {item.name}
+                    </a>
+                  )}
                 </motion.div>
               ))}
             </nav>
