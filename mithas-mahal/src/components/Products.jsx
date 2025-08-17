@@ -5,17 +5,16 @@ const products = [
   { id: 2, name: 'Rasgulla', price: 'Rs 180', img: '/images/sweets/rasgulla.webp', category: 'Sweets' },
   { id: 3, name: 'Soan Papadi', price: 'Rs 99', img: '/images/sweets/soan-papdi.webp', category: 'Sweets' },
   { id: 4, name: 'Kaju Katli', price: 'Rs 140', img: '/images/sweets/kajukatli.webp', category: 'Sweets' },
-  { id: 5, name: 'Mysore Pak', price: 'Rs 110', img: '/images/sweets/mysorepak.webp', category: 'Sweets' },
 
-  { id: 6, name: 'Daal Samosa', price: 'Rs 120', img: '/images/savouries/DaalSamosa.jpg', category: 'Savouries' },
-  { id: 7, name: 'Nendram Chips', price: 'Rs 90', img: '/images/savouries/NendramChips.jpg', category: 'Savouries' },
-  { id: 8, name: 'Spicy Murukku', price: 'Rs 150', img: '/images/savouries/SpicyMurkku.webp', category: 'Savouries' },
-  { id: 9, name: 'Thatthai', price: 'Rs 100', img: '/images/savouries/Thattai.webp', category: 'Savouries' },
+  { id: 5, name: 'Daal Samosa', price: 'Rs 120', img: '/images/savouries/DaalSamosa.jpg', category: 'Savouries' },
+  { id: 6, name: 'Nendram Chips', price: 'Rs 90', img: '/images/savouries/NendramChips.jpg', category: 'Savouries' },
+  { id: 7, name: 'Spicy Murukku', price: 'Rs 150', img: '/images/savouries/SpicyMurkku.webp', category: 'Savouries' },
+  { id: 8, name: 'Thatthai', price: 'Rs 100', img: '/images/savouries/Thattai.webp', category: 'Savouries' },
 
-  { id: 10, name: 'Cream Roll', price: 'Rs 130', img: '/images/bakes/CreamRoll.jpg', category: 'Bakes' },
-  { id: 11, name: 'Ghee Cake', price: 'Rs 160', img: '/images/bakes/Ghee-Cake.jpg', category: 'Bakes' },
-  { id: 12, name: 'Banana Cake', price: 'Rs 170', img: '/images/bakes/BANANACAKE.webp', category: 'Bakes' },
-  { id: 13, name: 'Jam Roll', price: 'Rs 140', img: '/images/bakes/jam-roll.jpeg', category: 'Bakes' },
+  { id: 9, name: 'Cream Roll', price: 'Rs 130', img: '/images/bakes/CreamRoll.jpg', category: 'Bakes' },
+  { id: 10, name: 'Ghee Cake', price: 'Rs 160', img: '/images/bakes/Ghee-Cake.jpg', category: 'Bakes' },
+  { id: 11, name: 'Banana Cake', price: 'Rs 170', img: '/images/bakes/BANANACAKE.webp', category: 'Bakes' },
+  { id: 12, name: 'Jam Roll', price: 'Rs 140', img: '/images/bakes/jam-roll.jpeg', category: 'Bakes' },
 ];
 
 const Products = ({ title, id }) => {
