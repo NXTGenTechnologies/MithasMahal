@@ -51,6 +51,8 @@ const Products = ({ title, id }) => {
 export default Products;*/
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const products = [
   { id: 1, name: "Motichoor Laddu", price: "Rs 200", img: "/images/sweets/laddu.webp", category: "Sweets" },
@@ -78,29 +80,34 @@ const Products = ({ title, id }) => {
     slidesToScroll: 1,
     arrows: true,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 480, settings: { slidesToShow: 1 } },
+      { breakpoint: 1280, settings: { slidesToShow: 3 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 640, settings: { slidesToShow: 1 } },
     ],
   };
 
   return (
     <section className="py-12 px-6">
-      <h2 id={id} className="text-4xl text-green-700 font-bold mb-10 text-center">
+      <h2
+        id={id}
+        className="text-4xl text-green-700 font-bold mb-10 text-center"
+      >
         {title}
       </h2>
 
       <Slider {...settings}>
         {filteredProducts.map((p) => (
-          <div key={p.id} className="px-4">
+          <div key={p.id} className="px-3">
             <div className="bg-white rounded-xl shadow-md overflow-hidden text-center hover:shadow-xl transition transform hover:scale-105">
               <img
                 src={p.img}
                 alt={p.name}
-                className="w-full h-56 object-cover rounded-t-lg"
+                className="w-full h-64 object-cover rounded-t-lg"
               />
               <div className="p-4">
-                <h4 className="text-lg font-semibold text-gray-800">{p.name}</h4>
+                <h4 className="text-lg font-semibold text-gray-800">
+                  {p.name}
+                </h4>
                 <p className="text-md text-gray-600">{p.price}</p>
                 <p className="text-sm text-gray-500 mt-1">500g | 1 Box</p>
               </div>
@@ -108,18 +115,9 @@ const Products = ({ title, id }) => {
           </div>
         ))}
       </Slider>
-
-      {/* Optional button like in screenshot */}
-      <div className="flex justify-center mt-8">
-        <button className="bg-black text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800">
-          Explore Now
-        </button>
-      </div>
     </section>
   );
 };
 
 export default Products;
-
-
 
