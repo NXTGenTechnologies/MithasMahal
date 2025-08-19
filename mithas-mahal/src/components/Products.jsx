@@ -51,6 +51,7 @@ const Products = ({ title, id }) => {
 export default Products;*/
 import React from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -115,6 +116,16 @@ const Products = ({ title, id }) => {
           </div>
         ))}
       </Slider>
+      {title === "Sweets" && (
+        <div className="mt-8">
+          <Link
+            to="/sweets"
+            className="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition"
+          >
+            View All Sweets
+          </Link>
+        </div>
+      )}
     </section>
   );
 };
