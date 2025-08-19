@@ -11,13 +11,13 @@ const blogs = [
     id: 2,
     title: "Healthy Sweets for Festive Seasons",
     description: "Learn about our range of guilt-free sweets made with natural ingredients and less sugar.",
-    img: "/images/blog2.jpg"
+    img: "/images/blog2.jpeg"
   },
   {
     id: 3,
     title: "Behind the Scenes at Mithas Mahal",
     description: "Take a peek into how we prepare fresh, delicious sweets daily with love and care.",
-    img: "/images/blog3.jpg"
+    img: "/images/blog3.jpeg"
   }
 ];
 
