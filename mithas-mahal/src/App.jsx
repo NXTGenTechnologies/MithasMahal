@@ -38,6 +38,7 @@ function App() {
 
 export default App;*/
 import React from 'react';
+import Blogs from './components/Blogs';
 import { Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion"; 
 import Header from './components/Header';
@@ -104,6 +105,13 @@ function App() {
               >
                 <Products title="Bakes" id="bakes" />
               </motion.div>
+              <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+            >
+        <Blogs />
+        </motion.div>
 
              
               <motion.div
