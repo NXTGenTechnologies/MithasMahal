@@ -32,9 +32,9 @@ const Blogs = () => {
             className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
           >
             <img
-              src={blog.img}
-              alt={blog.title}
-              className="w-full h-48 object-cover"
+            src={blog.img}
+            alt={blog.title}
+            className="w-full h-auto object-contain"
             />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-3">{blog.title}</h3>
