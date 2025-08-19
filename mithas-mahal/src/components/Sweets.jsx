@@ -1,0 +1,303 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+const sweetData = [
+  {
+    id: 1,
+    name: "Kaju Katli",
+    price: 500,
+    image: "/images/sweets/kajukatli.webp",
+    category: "Ghee Sweets",
+  },
+  {
+    id: 2,
+    name: "Barfi",
+    price: 450,
+    image: "/images/sweets/barfi.webp",
+    category: "All Sweets",
+  },
+  {
+    id: 3,
+    name: "Ladoo",
+    price: 400,
+    image: "/images/sweets/laddu.webp",
+    category: "Traditional Sweets",
+  },
+  {
+    id: 4,
+    name: "Soan Papdi",
+    price: 300,
+    image: "/images/sweets/soan-papdi.webp",
+    category: "Tea Time Snacks",
+  },
+  {
+    id: 5,
+    name: "Rasgulla",
+    price: 380,
+    image: "/images/sweets/rasgulla.webp",
+    category: "All Sweets",
+  },
+  {
+    id: 6,
+    name: "Mysore Pak",
+    price: 420,
+    image: "/images/sweets/mysorepak.webp",
+    category: "Ghee Sweets",
+  },
+  {
+    id: 7,
+    name: "Chikki",
+    price: 250,
+    image: "/images/sweets/chikki.jpg",
+    category: "Tea Time Snacks",
+  },
+  {
+    id: 8,
+    name: "Peda",
+    price: 390,
+    image: "/images/sweets/peda.webp",
+    category: "Traditional Sweets",
+  },
+  {
+    id: 9,
+    name: "Jalebi",
+    price: 320,
+    image: "/images/sweets/jalebi.webp",
+    category: "All Sweets",
+  },
+  {
+    id: 10,
+    name: "Halwa",
+    price: 310,
+    image: "/images/sweets/halwa.webp",
+    category: "Ghee Sweets",
+  },
+  {
+    id: 11,
+    name: "Kaju Katli",
+    price: 500,
+    image: "/images/sweets/kajukatli.webp",
+    category: "Traditional Sweets",
+  },
+  {
+    id: 12,
+    name: "Ladoo",
+    price: 400,
+    image: "/images/sweets/laddu.webp",
+    category: "Ghee Sweets",
+  },
+  {
+    id: 13,
+    name: "Barfi",
+    price: 450,
+    image: "/images/sweets/barfi.webp",
+    category: "All Sweets",
+  },
+  {
+    id: 14,
+    name: "Soan Papdi",
+    price: 300,
+    image: "/images/sweets/soan-papdi.webp",
+    category: "Tea Time Snacks",
+  },
+  {
+    id: 15,
+    name: "Rasgulla",
+    price: 380,
+    image: "/images/sweets/rasgulla.webp",
+    category: "All Sweets",
+  },
+  {
+    id: 16,
+    name: "Mysore Pak",
+    price: 420,
+    image: "/images/sweets/mysorepak.webp",
+    category: "Traditional Sweets",
+  },
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6 },
+  }),
+};
+
+const categories = ["All Sweets", "Ghee Sweets", "Traditional Sweets", "Tea Time Snacks"];
+
+export default function Sweets() {
+  const [selectedCategory, setSelectedCategory] = useState("All Sweets");
+  const [quantities, setQuantities] = useState({});
+  const [weights, setWeights] = useState({});
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+
+  const filteredSweets = sweetData.filter((item) =>
+    selectedCategory === "All Sweets" ? true : item.category === selectedCategory
+  );
+
+  const totalPages = Math.ceil(filteredSweets.length / itemsPerPage);
+  const paginatedSweets = filteredSweets.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const countByCategory = (cat) =>
+    sweetData.filter((item) =>
+      cat === "All Sweets" ? true : item.category === cat
+    ).length;
+
+  const handleQuantity = (id, change) => {
+    setQuantities((prev) => ({
+      ...prev,
+      [id]: Math.max(1, (prev[id] || 1) + change),
+    }));
+  };
+
+  const handleWeight = (id, value) => {
+    setWeights((prev) => ({ ...prev, [id]: value }));
+  };
+
+  return (
+    <div className="px-4 py-8 max-w-screen-xl mx-auto">
+      <motion.h2 className="text-3xl md:text-5xl lg:text-6xl text-center mt-8" id="sweets"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        Sweets
+      </motion.h2>
+
+      
+      <motion.div className="flex justify-center gap-6 md:gap-24 m-12 flex-wrap"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {[
+          { img: "shipping", text: "National Shipping in 4-6 days" },
+          { img: "time", text: "18 Days Shelf Life" },
+          { img: "earth", text: "International Shipping in 6-9 days" },
+          { img: "no-preservatives", text: "No Preservatives" },
+        ].map(({ img, text }, i) => (
+          <div key={i} className="flex flex-col items-center justify-center text-center text-sm sm:text-base">
+            <img src={`/images/${img}.png`} alt={text} width={40} height={40} className="py-4" />
+            <p className="hidden md:block">{text}</p>
+          </div>
+        ))}
+      </motion.div>
+
+     
+      <motion.div
+        className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          visible: {
+            transition: { staggerChildren: 0.1 }
+          }
+        }}
+      >
+        {categories.map((cat) => (
+          <motion.div
+            key={cat}
+            onClick={() => {
+              setSelectedCategory(cat);
+              setCurrentPage(1);
+            }}
+            className={`cursor-pointer border rounded-xl text-center transition ${
+              selectedCategory === cat
+                ? "border-[#9c7e38]"
+                : "border-transparent"
+            }`}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
+            <img
+              src={`/images/${cat.toLowerCase().replace(/ /g, "-")}.webp`}
+              alt={cat}
+              className="w-full h-48 mx-auto mb-2 rounded-xl object-cover"
+            />
+            <h3 className="text-xl font-semibold">{cat}</h3>
+            <div className="text-sm text-gray-800">
+              {countByCategory(cat)} Products
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+
+    
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.05,
+            },
+          },
+        }}
+      >
+        {paginatedSweets.map((sweet) => (
+          <motion.div
+            key={sweet.id}
+            className="rounded-xl p-4 flex flex-col bg-transparent transition"
+            whileHover={{ scale: 1.02 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <img
+              src={sweet.image}
+              alt={sweet.name}
+              className="w-full h-48 object-cover mb-3 rounded-md mx-auto"
+            />
+            <h3 className="font-semibold text-[#9c7e38] text-xl">{sweet.name}</h3>
+          </motion.div>
+        ))}
+      </motion.div>
+
+
+      <motion.div
+        className="flex justify-center mt-10 space-x-3 font-semibold"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <button
+          onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+          className="px-3 py-1 cursor-pointer"
+        >
+          &lt;
+        </button>
+        {Array.from({ length: totalPages }, (_, i) => (
+          <button
+            key={i + 1}
+            onClick={() => setCurrentPage(i + 1)}
+            className={`px-3 py-1 rounded-full cursor-pointer ${
+              currentPage === i + 1 ? "bg-[#9c7e38] text-white" : ""
+            }`}
+          >
+            {i + 1}
+          </button>
+        ))}
+        <button
+          onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+          className="px-3 py-1 cursor-pointer"
+        >
+          &gt;
+        </button>
+      </motion.div>
+    </div>
+  );
+}

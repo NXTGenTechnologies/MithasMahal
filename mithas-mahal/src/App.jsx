@@ -47,11 +47,14 @@ import Features from './components/Features';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ExcellenceSection from './components/ExcellenceSection';
+import Sweets from './components/Sweets';
 
 function App() {
   return (
     <div className="App">
       <Header />
+
       <Routes>
         <Route
           path="/"
@@ -73,6 +76,8 @@ function App() {
                 transition={{ duration: 0.8 }}
               >
                 <Features />
+
+                <ExcellenceSection />
               </motion.div>
 
               
@@ -113,6 +118,8 @@ function App() {
         />
 
        <Route path="/aboutus" element={<About />} />
+       <Route path="/sweets" element={<Sweets />} />
+
             </Routes>
 
       <Footer />

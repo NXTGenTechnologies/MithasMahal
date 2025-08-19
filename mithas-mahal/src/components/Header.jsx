@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 /*const navItems = ["Home", "Sweets", "Savouries", "Bakes", "About Us", "Contact Us"];*/
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Sweets", href: "/#sweets" },
+  { name: "Sweets", href: "/sweets" },
   { name: "Savouries", href: "/#savouries" },
   { name: "Bakes", href: "/#bakes" },
   { name: "About Us", href: "/aboutus" },
@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-transparent border-b border-amber-100 shadow-sm top-0 z-50">
+    <header className="bg-transparent border-b border-amber-100 top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
