@@ -120,7 +120,7 @@ const Products = ({ title, id }) => {
         <div className="mt-8">
           <Link
             to="/sweets"
-            className="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition"
+            className="bg-black text-white px-6 py-2 rounded-md mx-auto block hover:bg-gray-800 transition"
           >
             View All Sweets
           </Link>
