@@ -117,7 +117,7 @@ const Products = ({ title, id }) => {
         ))}
       </Slider>
       {title === "Sweets" && (
-        <div className="mt-8">
+        <div className="w-full flex justify-center mt-4">
           <Link
             to="/sweets"
             className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
