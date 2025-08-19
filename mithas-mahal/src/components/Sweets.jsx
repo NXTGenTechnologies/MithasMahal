@@ -129,8 +129,6 @@ const categories = ["All Sweets", "Ghee Sweets", "Traditional Sweets", "Tea Time
 
 export default function Sweets() {
   const [selectedCategory, setSelectedCategory] = useState("All Sweets");
-  const [quantities, setQuantities] = useState({});
-  const [weights, setWeights] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 
@@ -149,19 +147,8 @@ export default function Sweets() {
       cat === "All Sweets" ? true : item.category === cat
     ).length;
 
-  const handleQuantity = (id, change) => {
-    setQuantities((prev) => ({
-      ...prev,
-      [id]: Math.max(1, (prev[id] || 1) + change),
-    }));
-  };
-
-  const handleWeight = (id, value) => {
-    setWeights((prev) => ({ ...prev, [id]: value }));
-  };
-
   return (
-    <div className="px-4 py-8 max-w-screen-xl mx-auto">
+    <div className="px-4 py-8 mb-10 max-w-screen-xl mx-auto">
       <motion.h2 className="text-3xl md:text-5xl lg:text-6xl text-center mt-8" id="sweets"
         variants={fadeUp}
         initial="hidden"
@@ -172,7 +159,7 @@ export default function Sweets() {
       </motion.h2>
 
       
-      <motion.div className="flex justify-center gap-6 md:gap-24 m-12 flex-wrap"
+      <motion.div className="flex justify-center gap-6 md:gap-24 m-16 flex-wrap"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -193,7 +180,7 @@ export default function Sweets() {
 
      
       <motion.div
-        className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12"
+        className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12 pt-8"
         initial="hidden"
         animate="visible"
         variants={{
@@ -221,11 +208,11 @@ export default function Sweets() {
               visible: { opacity: 1, y: 0 }
             }}
           >
-            <img
+            {/* <img
               src={`/images/${cat.toLowerCase().replace(/ /g, "-")}.webp`}
               alt={cat}
               className="w-full h-48 mx-auto mb-2 rounded-xl object-cover"
-            />
+            /> */}
             <h3 className="text-xl font-semibold">{cat}</h3>
             <div className="text-sm text-gray-800">
               {countByCategory(cat)} Products

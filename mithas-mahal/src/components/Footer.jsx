@@ -19,7 +19,7 @@ const fadeInUp = {
 
 export default function Footer() {
   return (
-    <footer className="bg-transparent pt-12 pb-6">
+    <footer className="bg-transparent border-t border-[#9c7e38] pt-12 pb-6">
       <div className="container mx-auto px-4 md:px-20 lg:px-32">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"
