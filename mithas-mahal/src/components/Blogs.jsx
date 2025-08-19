@@ -11,7 +11,7 @@ const blogs = [
     id: 2,
     title: "Healthy Sweets for Festive Seasons",
     description: "Learn about our range of guilt-free sweets made with natural ingredients and less sugar.",
-    img: "/images/blog2.jpeg"
+    img: "/images/blog.jpeg"
   },
   {
     id: 3,
