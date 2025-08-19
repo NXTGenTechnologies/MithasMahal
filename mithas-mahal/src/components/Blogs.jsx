@@ -34,7 +34,7 @@ const Blogs = () => {
             <img
             src={blog.img}
             alt={blog.title}
-            className="w-full h-auto object-contain"
+            className="w-full h-56 object-cover rounded-t-2xl"
             />
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-3">{blog.title}</h3>
