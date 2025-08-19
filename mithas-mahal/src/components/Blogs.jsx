@@ -39,9 +39,6 @@ const Blogs = () => {
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-3">{blog.title}</h3>
               <p className="text-gray-600 text-sm">{blog.description}</p>
-              <button className="mt-4 text-pink-600 font-medium hover:underline">
-                Read More →
-              </button>
             </div>
           </div>
         ))}
