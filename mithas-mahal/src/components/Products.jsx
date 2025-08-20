@@ -126,6 +126,26 @@ const Products = ({ title, id }) => {
           </Link>
         </div>
       )}
+      {title === "Savouries" && (
+        <div className="w-full flex justify-center mt-4">
+          <Link
+            to="/savouries"
+            className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
+          >
+            View All Savouries
+          </Link>
+        </div>
+      )}
+      {title === "Bakes" && (
+        <div className="w-full flex justify-center mt-4">
+          <Link
+            to="/bakes"
+            className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
+          >
+            View All Bakes
+          </Link>
+        </div>
+      )}
     </section>
   );
 };
