@@ -50,6 +50,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ExcellenceSection from './components/ExcellenceSection';
 import Sweets from './components/Sweets';
+import Savouries from './components/Savouries';
+import Bakes from './components/Bakes';
 
 function App() {
   return (
@@ -127,8 +129,8 @@ function App() {
 
        <Route path="/aboutus" element={<About />} />
        <Route path="/sweets" element={<Sweets />} />
-        <Route path="/savouries" element={<Sweets />} />
-        <Route path="/bakes" element={<Sweets />} />
+        <Route path="/savouries" element={<Savouries />} />
+        <Route path="/bakes" element={<Bakes />} />
 
             </Routes>
 
