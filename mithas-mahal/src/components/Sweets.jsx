@@ -93,22 +93,16 @@ const sweetData = [
     image: "/images/sweets/barfi.webp",
     category: "All Sweets",
   },
+ 
   {
     id: 14,
-    name: "Soan Papdi",
-    price: 300,
-    image: "/images/sweets/soan-papdi.webp",
-    category: "Tea Time Snacks",
-  },
-  {
-    id: 15,
     name: "Rasgulla",
     price: 380,
     image: "/images/sweets/rasgulla.webp",
     category: "All Sweets",
   },
   {
-    id: 16,
+    id: 15,
     name: "Mysore Pak",
     price: 420,
     image: "/images/sweets/mysorepak.webp",
