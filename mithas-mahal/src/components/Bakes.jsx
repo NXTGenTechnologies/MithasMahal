@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const bakeData = [
   { id: 1, name: "Banana Cake", price: 350, image: "/images/bakes/BANANACAKE.webp", category: "Cakes" },
   { id: 2, name: "CreamRoll", price: 200, image: "/images/bakes/CreamRoll.jpg", category: "Pastries" },
-  { id: 3, name: "Ghee cake", price: 150, image: "/images/bakes/Ghee-cake.jpg", category: "Cakes" },
+  { id: 3, name: "Ghee cake", price: 150, image: "/images/bakes/Ghee-Cake.jpg", category: "Cakes" },
   { id: 4, name: "Jam roll", price: 180, image: "/images/bakes/jam-roll.jpeg", category: "Pastries" },
   { id: 5, name: "Cupcake", price: 120, image: "/images/bakes/cup-cake.jpg", category: "Muffins" },
   { id: 6, name: "Pancake", price: 400, image: "/images/bakes/pancake.webp", category: "Cakes" },
