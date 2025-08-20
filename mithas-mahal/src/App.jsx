@@ -52,6 +52,7 @@ import ExcellenceSection from './components/ExcellenceSection';
 import Sweets from './components/Sweets';
 import Savouries from './components/Savouries';
 import Bakes from './components/Bakes';
+import Selection from './components/Selection';
 
 function App() {
   return (
@@ -134,6 +135,7 @@ function App() {
         <Route path="/contactus" element={<Contact />}/>
 
             </Routes>
+      <Selection />
 
       <Footer />
     </div>
