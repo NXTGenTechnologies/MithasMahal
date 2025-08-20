@@ -56,7 +56,7 @@ export default function Savouries() {
         Savouries
       </motion.h2>
 
-      {/* Info Section */}
+     
       <motion.div
         className="flex justify-center gap-6 md:gap-24 m-16 flex-wrap"
         variants={fadeUp}
@@ -86,7 +86,7 @@ export default function Savouries() {
         ))}
       </motion.div>
 
-      {/* Categories */}
+      
       <motion.div
         className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12 pt-8"
         initial="hidden"
@@ -116,7 +116,7 @@ export default function Savouries() {
         ))}
       </motion.div>
 
-      {/* Products */}
+     
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         initial="hidden"
@@ -143,7 +143,7 @@ export default function Savouries() {
         ))}
       </motion.div>
 
-      {/* Pagination */}
+      
       <motion.div
         className="flex justify-center mt-10 space-x-3 font-semibold"
         initial={{ opacity: 0 }}
