@@ -8,7 +8,7 @@ const savouryData = [
   { id: 4, name: "Murukku", price: 120, image: "/images/savouries/SpicyMurkku.webp", category: "Dry Snacks" },
   { id: 5, name: "Cashew", price: 90, image: "/images/savouries/fried-cashew.webp", category: "Tea Time Snacks" },
   { id: 6, name: "Thattai", price: 80, image: "/images/savouries/Thattai.webp", category: "Fried Snacks" },
-  { id: 7, name: "kadhalai mitthai", price: 70, image: "/images/savouries/kadalai-mitthai.jpg", category: "Dry Snacks" },
+  { id: 7, name: "kadhalai mitthai", price: 70, image: "/images/savouries/kadalai-mittai.jpg", category: "Dry Snacks" },
   { id: 8, name: "Pakora", price: 60, image: "/images/savouries/pakora.jpeg", category: "Tea Time Snacks" },
 ];
 
