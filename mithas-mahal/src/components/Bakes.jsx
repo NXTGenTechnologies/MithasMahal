@@ -12,7 +12,7 @@ const bakeData = [
   { id: 8, name: "Sweet bun", price: 250, image: "/images/bakes/sweet-bun.jpg", category: "Muffins" },
 ];
 
-const categories = ["All Bakes", "Cakes", "Brownies", "Muffins", "Pastries"];
+const categories = ["All Bakes", "Cakes", "Muffins", "Pastries"];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
