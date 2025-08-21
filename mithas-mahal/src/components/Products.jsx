@@ -1,38 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// Add more products for demonstration
+
 const products = [
   // Sweets
   { id: 1, name: "Motichoor Laddu", price: "Rs 200", img: "/images/sweets/laddu.webp", category: "Sweets" },
   { id: 2, name: "Rasgulla", price: "Rs 180", img: "/images/sweets/rasgulla.webp", category: "Sweets" },
   { id: 3, name: "Soan Papadi", price: "Rs 99", img: "/images/sweets/soan-papdi.webp", category: "Sweets" },
   { id: 4, name: "Kaju Katli", price: "Rs 140", img: "/images/sweets/kajukatli.webp", category: "Sweets" },
-  { id: 13, name: "Gulab Jamun", price: "Rs 160", img: "/images/sweets/gulabjamun.webp", category: "Sweets" },
-  { id: 14, name: "Barfi", price: "Rs 120", img: "/images/sweets/barfi.webp", category: "Sweets" },
-  { id: 15, name: "Peda", price: "Rs 110", img: "/images/sweets/peda.webp", category: "Sweets" },
-  { id: 15, name: "Jalebi", price: "Rs 110", img: "/images/sweets/jalebi.webp", category: "Sweets" },
+  { id: 5, name: "Gulab Jamun", price: "Rs 160", img: "/images/sweets/gulabjamun.webp", category: "Sweets" },
+  { id: 6, name: "Barfi", price: "Rs 120", img: "/images/sweets/barfi.webp", category: "Sweets" },
+  { id: 7, name: "Peda", price: "Rs 110", img: "/images/sweets/peda.webp", category: "Sweets" },
+  { id: 8, name: "Jalebi", price: "Rs 110", img: "/images/sweets/jalebi.webp", category: "Sweets" },
 
   // Savouries
-  { id: 5, name: "Daal Samosa", price: "Rs 120", img: "/images/savouries/DaalSamosa.jpg", category: "Savouries" },
-  { id: 6, name: "Nendram Chips", price: "Rs 90", img: "/images/savouries/NendramChips.jpg", category: "Savouries" },
-  { id: 7, name: "Spicy Murukku", price: "Rs 150", img: "/images/savouries/SpicyMurkku.webp", category: "Savouries" },
-  { id: 8, name: "Thatthai", price: "Rs 100", img: "/images/savouries/Thattai.webp", category: "Savouries" },
-  { id: 16, name: "Cashew", price: "Rs 90", img: "/images/savouries/fried-cashew.webp", category: "Savouries" },
-  { id: 17, name: "Karasev", price: "Rs 100", img: "/images/savouries/pepperKarachev.jpeg", category: "Savouries" },
-  { id: 17, name: "Kadhalai Mitthai", price: "Rs 70", img: "/images/savouries/kadalai-mittai.jpg", category: "Savouries" },
-  { id: 17, name: "Pakora", price: "Rs 60", img: "/images/savouries/pakora.jpeg", category: "Savouries" },
+  { id: 9, name: "Daal Samosa", price: "Rs 120", img: "/images/savouries/DaalSamosa.jpg", category: "Savouries" },
+  { id: 10, name: "Nendram Chips", price: "Rs 90", img: "/images/savouries/NendramChips.jpg", category: "Savouries" },
+  { id: 11, name: "Spicy Murukku", price: "Rs 150", img: "/images/savouries/SpicyMurkku.webp", category: "Savouries" },
+  { id: 12, name: "Thatthai", price: "Rs 100", img: "/images/savouries/Thattai.webp", category: "Savouries" },
+  { id: 13, name: "Cashew", price: "Rs 90", img: "/images/savouries/fried-cashew.webp", category: "Savouries" },
+  { id: 14, name: "Karasev", price: "Rs 100", img: "/images/savouries/pepperKarachev.jpeg", category: "Savouries" },
+  { id: 15, name: "Kadhalai Mitthai", price: "Rs 70", img: "/images/savouries/kadalai-mittai.jpg", category: "Savouries" },
+  { id: 16, name: "Pakora", price: "Rs 60", img: "/images/savouries/pakora.jpeg", category: "Savouries" },
 
   // Bakes
-  { id: 9, name: "Cream Roll", price: "Rs 130", img: "/images/bakes/CreamRoll.jpg", category: "Bakes" },
-  { id: 10, name: "Ghee Cake", price: "Rs 160", img: "/images/bakes/Ghee-Cake.jpg", category: "Bakes" },
-  { id: 11, name: "Banana Cake", price: "Rs 170", img: "/images/bakes/BANANACAKE.webp", category: "Bakes" },
-  { id: 12, name: "Jam Roll", price: "Rs 140", img: "/images/bakes/jam-roll.jpeg", category: "Bakes" },
-  { id: 18, name: "Pastry", price: "Rs 180", img: "/images/bakes/pastry.webp", category: "Bakes" },
-  { id: 19, name: "Pancake", price: "Rs 400", img: "/images/bakes/pancake.webp", category: "Bakes" },
-  { id: 19, name: "Sweet Bun", price: "Rs 250", img: "/images/bakes/sweet-bun.jpg", category: "Bakes" },
-  { id: 19, name: "Cupcake", price: "Rs 120", img: "/images/bakes/cup-cake.jpg", category: "Bakes" },
-
+  { id: 17, name: "Cream Roll", price: "Rs 130", img: "/images/bakes/CreamRoll.jpg", category: "Bakes" },
+  { id: 18, name: "Ghee Cake", price: "Rs 160", img: "/images/bakes/Ghee-Cake.jpg", category: "Bakes" },
+  { id: 19, name: "Banana Cake", price: "Rs 170", img: "/images/bakes/BANANACAKE.webp", category: "Bakes" },
+  { id: 20, name: "Jam Roll", price: "Rs 140", img: "/images/bakes/jam-roll.jpeg", category: "Bakes" },
+  { id: 21, name: "Pastry", price: "Rs 180", img: "/images/bakes/pastry.webp", category: "Bakes" },
+  { id: 22, name: "Pancake", price: "Rs 400", img: "/images/bakes/pancake.webp", category: "Bakes" },
+  { id: 23, name: "Sweet Bun", price: "Rs 250", img: "/images/bakes/sweet-bun.jpg", category: "Bakes" },
+  { id: 24, name: "Cupcake", price: "Rs 120", img: "/images/bakes/cup-cake.jpg", category: "Bakes" },
 ];
 
 const Products = ({ title, id }) => {
