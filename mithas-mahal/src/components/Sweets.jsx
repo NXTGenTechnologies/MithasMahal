@@ -209,11 +209,6 @@ export default function Sweets() {
               visible: { opacity: 1, y: 0 }
             }}
           >
-            {/* <img
-              src={`/images/${cat.toLowerCase().replace(/ /g, "-")}.webp`}
-              alt={cat}
-              className="w-full h-48 mx-auto mb-2 rounded-xl object-cover"
-            /> */}
             <h3 className="text-xl font-semibold">{cat}</h3>
             <div className="text-sm text-gray-800">
               {countByCategory(cat)} Products

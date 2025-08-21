@@ -45,10 +45,8 @@ const BestSeller = () => {
             variants={itemVariants}
             whileHover="hover"
           >
-            {/* Top Pattern */}
             <div className={`${item.border} h-4 w-full`} />
 
-            {/* Image */}
             <motion.img
               src={item.img}
               alt={item.name}
@@ -57,10 +55,8 @@ const BestSeller = () => {
               transition={{ duration: 0.3 }}
             />
 
-            {/* Bottom Pattern */}
             <div className={`${item.border} h-4 w-full`} />
 
-            {/* Title */}
             <h3 className="mt-4 text-lg font-semibold text-[#9c7e38]">
               {item.name}
             </h3>

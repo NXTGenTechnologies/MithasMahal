@@ -59,8 +59,6 @@ const Products = ({ title, id }) => {
             />
             <div className="p-4">
               <h4 className="text-lg font-semibold text-[#9c7e38]">{p.name}</h4>
-              {/* <p className="text-md text-gray-600">{p.price}</p> */}
-              {/* <p className="text-sm text-gray-500 mt-1">500g | 1 Box</p> */}
             </div>
           </div>
         ))}

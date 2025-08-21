@@ -24,15 +24,6 @@ const Hero = () => {
           Wide variety of sweets and delicacies to choose from. <br className="hidden sm:block" />
           Explore the deliciousness that awaits you!
         </motion.p>
-
-        {/* <motion.button
-          className="bg-transparent border border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md text-sm sm:text-base hover:bg-[#9c7e38] transition"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          Shop Now
-        </motion.button> */}
       </div>
     </section>
   );
