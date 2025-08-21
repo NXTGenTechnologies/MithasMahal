@@ -80,7 +80,16 @@ function App() {
           <Blogs />
         </motion.div>
 
-             
+            
+
+              
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Choose />
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +108,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />}/>
 
             </Routes>
-      <Choose />
+      
       <Selection />
 
       <Footer />
