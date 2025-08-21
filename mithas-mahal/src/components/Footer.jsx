@@ -31,7 +31,7 @@ export default function Footer() {
             <div className="relative mb-4">
               <img
                 src="/logo.png"
-                alt="Mcube Sweets"
+                alt="Mithas Mahal"
                 width={90}
                 height={32}
                 className="object-contain"
