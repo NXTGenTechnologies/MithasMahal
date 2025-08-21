@@ -5,19 +5,19 @@ const blogs = [
     id: 1,
     title: "The Sweet Tradition of Mithai",
     description: "Discover the cultural heritage of Indian sweets and why they’re loved in every celebration.",
-    img: "/images/blog1.webp"
+    img: "/images/blog1.jpg"
   },
   {
     id: 2,
     title: "Healthy Sweets for Festive Seasons",
     description: "Learn about our range of guilt-free sweets made with natural ingredients and less sugar.",
-    img: "/images/blog.jpeg"
+    img: "/images/blog.webp"
   },
   {
     id: 3,
     title: "Behind the Scenes at Mithas Mahal",
     description: "Take a peek into how we prepare fresh, delicious sweets daily with love and care.",
-    img: "/images/blog3.jpeg"
+    img: "/images/blog3.webp"
   }
 ];
 
