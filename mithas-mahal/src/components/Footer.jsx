@@ -57,7 +57,7 @@ export default function Footer() {
             <h3 className="text-2xl font-medium text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link to="/aboutus" className="text-gray-800 hover:text-[#9c7e38] cursor-pointer">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-800 hover:text-[#9c7e38] cursor-pointer">Contact Us</Link></li>
+              <li><Link to="/contactus" className="text-gray-800 hover:text-[#9c7e38] cursor-pointer">Contact Us</Link></li>
               <li><Link to="/shipping" className="text-gray-800 hover:text-[#9c7e38] cursor-pointer">Shipping Policy</Link></li>
               <li><Link to="/cancellation" className="text-gray-800 hover:text-[#9c7e38] cursor-pointer">Cancellation & Refund</Link></li>
             </ul>

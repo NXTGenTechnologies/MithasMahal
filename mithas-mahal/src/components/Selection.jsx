@@ -34,13 +34,13 @@ const Selection = () => {
         {features.map((f, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition"
+            className="bg-gray-100 rounded-2xl shadow-md p-6 hover:shadow-xl transition"
           >
             <div className="flex justify-center mb-4">{f.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">
+            <h3 className="text-xl font-semibold text-gray-950 mb-2">
               {f.title}
             </h3>
-            <p className="text-gray-500 text-sm">{f.desc}</p>
+            <p className="text-gray-600 text-sm">{f.desc}</p>
           </div>
         ))}
       </div>
