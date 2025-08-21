@@ -22,7 +22,6 @@ const containerVariants = {
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  hover: { scale: 1.03 },
 };
 
 const BestSeller = () => {
@@ -41,23 +40,29 @@ const BestSeller = () => {
         {bestSellers.map((item, index) => (
           <motion.div
             key={index}
-            className="text-center"
+            className="text-center group rounded-lg overflow-hidden transition-all duration-500"
             variants={itemVariants}
-            whileHover="hover"
+            whileHover={{ y: -8 }} // lift effect
           >
-            <div className={`${item.border} h-4 w-full`} />
+            {/* Top Bar */}
+            <div className={`${item.border} h-4 w-full transition-all duration-500 group-hover:brightness-125`} />
 
-            <motion.img
-              src={item.img}
-              alt={item.name}
-              className="w-full h-80 object-cover"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            />
+            {/* Image with overlay */}
+            <div className="relative">
+              <motion.img
+                src={item.img}
+                alt={item.name}
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
 
-            <div className={`${item.border} h-4 w-full`} />
+            {/* Bottom Bar */}
+            <div className={`${item.border} h-4 w-full transition-all duration-500 group-hover:brightness-125`} />
 
-            <h3 className="mt-4 text-lg font-semibold text-[#9c7e38]">
+            {/* Title */}
+            <h3 className="mt-4 text-lg font-semibold text-[#9c7e38] transition-colors duration-500 group-hover:text-[#d4af37]">
               {item.name}
             </h3>
           </motion.div>
