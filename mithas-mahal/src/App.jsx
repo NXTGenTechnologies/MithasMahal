@@ -16,7 +16,7 @@ import Bakes from './components/Bakes';
 import Selection from './components/Selection';
 import Award from './components/Award';
 import ContactUs from './components/ContactUs';
-
+import Choose from './components/ChooseUs';
 function App() {
   return (
     <div className="App">
@@ -99,6 +99,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />}/>
 
             </Routes>
+      <Choose />
       <Selection />
 
       <Footer />
