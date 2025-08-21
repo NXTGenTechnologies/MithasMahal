@@ -16,7 +16,8 @@ import Bakes from './components/Bakes';
 import Selection from './components/Selection';
 import Award from './components/Award';
 import ContactUs from './components/ContactUs';
-
+import Choose from './components/ChooseUs';
+import Best from './components/BestSeller.jsx';
 function App() {
   return (
     <div className="App">
@@ -76,11 +77,23 @@ function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
             >
-          <Award />
-          <Blogs />
         </motion.div>
-
-             
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Choose />
+                <Award />
+          <Blogs />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Best />
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -99,6 +112,7 @@ function App() {
         <Route path="/contactus" element={<ContactUs />}/>
 
             </Routes>
+      
       <Selection />
 
       <Footer />
