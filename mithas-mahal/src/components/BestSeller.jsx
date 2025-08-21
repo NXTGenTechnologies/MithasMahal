@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const bestSellers = [
   { name: "Sweets", img: "/images/best.jpeg", border: "purple-400" },
-  { name: "snacks", img: "/images/best1.jpg", border: "green-400" },
+  { name: "Snacks", img: "/images/best1.jpg", border: "green-400" },
 ];
 
 const containerVariants = {
