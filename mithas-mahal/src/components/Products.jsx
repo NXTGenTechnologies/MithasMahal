@@ -50,7 +50,7 @@ const Products = ({ title, id }) => {
         {filteredProducts.map((p) => (
           <div
             key={p.id}
-            className="min-w-[240px] max-w-[240px] bg-gray-100 rounded-xl overflow-hidden text-center transition transform hover:scale-105"
+            className="min-w-[240px] max-w-[240px] bg-gray-100 border border-[#9c7e38] rounded-xl overflow-hidden text-center transition transform hover:scale-105"
           >
             <img
               src={p.img}
