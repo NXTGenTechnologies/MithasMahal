@@ -122,7 +122,7 @@ export default function Bakes() {
         {paginatedBakes.map((item) => (
           <motion.div
             key={item.id}
-            className="rounded-xl p-4 flex flex-col bg-transparent transition"
+            className="rounded-xl items-center p-4 flex flex-col bg-transparent transition"
             whileHover={{ scale: 1.02 }}
           >
             <img

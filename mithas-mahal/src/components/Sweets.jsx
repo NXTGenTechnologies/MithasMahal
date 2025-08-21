@@ -233,7 +233,7 @@ export default function Sweets() {
         {paginatedSweets.map((sweet) => (
           <motion.div
             key={sweet.id}
-            className="rounded-xl p-4 flex flex-col bg-transparent transition"
+            className="rounded-xl items-center p-4 flex flex-col bg-transparent transition"
             whileHover={{ scale: 1.02 }}
             variants={{
               hidden: { opacity: 0, y: 20 },

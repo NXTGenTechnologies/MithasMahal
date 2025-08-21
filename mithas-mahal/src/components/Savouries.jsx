@@ -126,7 +126,7 @@ export default function Savouries() {
         {paginatedSavouries.map((item) => (
           <motion.div
             key={item.id}
-            className="rounded-xl p-4 flex flex-col bg-transparent transition"
+            className="rounded-xl items-center p-4 flex flex-col bg-transparent transition"
             whileHover={{ scale: 1.02 }}
             variants={{
               hidden: { opacity: 0, y: 20 },
