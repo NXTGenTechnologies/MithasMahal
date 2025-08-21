@@ -76,19 +76,15 @@ function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
             >
-          <Award />
-          <Blogs />
         </motion.div>
-
-            
-
-              
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 <Choose />
+                <Award />
+          <Blogs />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
