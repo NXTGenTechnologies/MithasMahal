@@ -24,7 +24,7 @@ const itemVariants = {
   hover: { scale: 1.05 }
 };
 
-/*const BestSeller = () => {
+const BestSeller = () => {
   return (
     <section className="bg-[#f0ede0] py-16">
       <h2 className="text-3xl font-semibold text-center mb-12">Best Seller</h2>
@@ -58,9 +58,9 @@ const itemVariants = {
   );
 };
 
-export default BestSeller;*/
+export default BestSeller;
 
-const BestSeller = () => {
+/*const BestSeller = () => {
   return (
     <section
       className="py-16 bg-cover bg-center relative"
@@ -105,4 +105,4 @@ const BestSeller = () => {
   );
 };
 
-export default BestSeller;
+export default BestSeller;*/
