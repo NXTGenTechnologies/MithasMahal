@@ -26,7 +26,7 @@ const itemVariants = {
 
 const BestSeller = () => {
   return (
-    <section className="bg-[#f0ede0] py-16">
+    <section className="py-16 bg-transparent">
       <h2 className="text-3xl font-semibold text-center mb-12">Best Seller</h2>
       <motion.div
         className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"
