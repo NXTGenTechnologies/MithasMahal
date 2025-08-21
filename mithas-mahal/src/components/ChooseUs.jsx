@@ -3,8 +3,8 @@ import { FaMapMarkerAlt, FaHeart, FaCheckCircle, FaFlask } from "react-icons/fa"
 
 const ChooseUs = () => {
   return (
-    <section className="bg-red-700 text-white py-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+    <section className="bg-red-700 my-12 md:my-16 text-white py-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         
         <div>
           <FaMapMarkerAlt className="mx-auto text-4xl mb-3" />

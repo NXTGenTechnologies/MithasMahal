@@ -7,7 +7,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Features from './components/Features';
 import Products from './components/Products';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ExcellenceSection from './components/ExcellenceSection';
 import Sweets from './components/Sweets';
@@ -18,6 +17,7 @@ import Award from './components/Award';
 import ContactUs from './components/ContactUs';
 import Choose from './components/ChooseUs';
 import Best from './components/BestSeller.jsx';
+import Testimonials from './components/Testimonials.jsx';
 function App() {
   return (
     <div className="App">
@@ -44,8 +44,16 @@ function App() {
                 transition={{ duration: 0.8 }}
               >
                 <Features />
-
                 <ExcellenceSection />
+              </motion.div>
+
+
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Best />
               </motion.div>
 
               
@@ -72,12 +80,8 @@ function App() {
               >
                 <Products title="Bakes" id="bakes" />
               </motion.div>
-              <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-            >
-        </motion.div>
+
+
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -85,21 +89,17 @@ function App() {
               >
                 <Choose />
                 <Award />
-          <Blogs />
+                <Blogs />
               </motion.div>
+
+
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <Best />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <Contact />
+                <Selection />
+                <Testimonials />
               </motion.div>
             </>
           }
@@ -111,9 +111,8 @@ function App() {
         <Route path="/bakes" element={<Bakes />} />
         <Route path="/contactus" element={<ContactUs />}/>
 
-            </Routes>
+      </Routes>
       
-      <Selection />
 
       <Footer />
     </div>
