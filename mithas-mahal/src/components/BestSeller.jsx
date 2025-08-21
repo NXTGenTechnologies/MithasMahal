@@ -24,7 +24,7 @@ const itemVariants = {
   hover: { scale: 1.05 }
 };
 
-const BestSeller = () => {
+/*const BestSeller = () => {
   return (
     <section className="bg-[#f0ede0] py-16">
       <h2 className="text-3xl font-semibold text-center mb-12">Best Seller</h2>
@@ -54,6 +54,53 @@ const BestSeller = () => {
           </motion.div>
         ))}
       </motion.div>
+    </section>
+  );
+};
+
+export default BestSeller;*/
+
+const BestSeller = () => {
+  return (
+    <section
+      className="py-16 bg-cover bg-center relative"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+
+      <div className="relative z-10 text-center">
+        <h2 className="text-3xl font-semibold mb-12 text-white drop-shadow-lg">
+          Best Seller
+        </h2>
+
+        <motion.div
+          className="flex justify-center gap-8 flex-wrap"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {bestSellers.map((item, index) => (
+            <motion.div
+              key={index}
+              className="text-center cursor-pointer w-64"
+              variants={itemVariants}
+              whileHover="hover"
+            >
+              <div className={`border-t-8 border-b-8 border-${item.border} overflow-hidden rounded-lg`}>
+                <motion.img
+                  src={item.img}
+                  alt={item.name}
+                  className="w-full h-72 object-cover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+              <h3 className="mt-4 font-semibold text-white drop-shadow-md">{item.name}</h3>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 };
