@@ -53,6 +53,7 @@ import Sweets from './components/Sweets';
 import Savouries from './components/Savouries';
 import Bakes from './components/Bakes';
 import Selection from './components/Selection';
+import Award from './components/Award';
 
 function App() {
   return (
@@ -113,7 +114,8 @@ function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
             >
-        <Blogs />
+          <Award />
+          <Blogs />
         </motion.div>
 
              
