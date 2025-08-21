@@ -1,50 +1,41 @@
-/*import React from 'react';
-import heroImage from '/images/hero5.jpg';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-      <section 
-  className="w-full h-[600px] md:h-[500px] text-center text-black bg-cover bg-center"
-  style={{ backgroundImage: `url(${heroImage})` }}
->
-      <h1 className="text-4xl md:text-5xl font-serif text-white-600 mb-4">Welcome to Mithas Mahal Sweets</h1>
-      <p className="text-lg md:text-xl">Delicious sweets, savories & bakes crafted with love</p>
-    </section>
-  );
-};
+    <section className="bg-[url('/images/heroBG.jpeg')] bg-cover bg-center bg-no-repeat h-[500px] flex items-center py-10 sm:py-12 md:py-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 text-center md:text-right">
+        <motion.h1
+          className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-8 sm:mb-8 leading-snug sm:leading-tight font-heading"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Welcome to <br className="hidden md:block" /> Mithas Mahal
+        </motion.h1>
 
+        <motion.p
+          className="text-white text-sm sm:text-base md:text-lg mb-8 sm:mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Wide variety of sweets and delicacies to choose from. <br className="hidden sm:block" />
+          Explore the deliciousness that awaits you!
+        </motion.p>
 
-
-export default Hero;*/
-import React from 'react';
-import heroImage from '/images/hero5.jpg';
-
-const Hero = () => {
-  return (
-    <section className="relative w-full h-[600px] md:h-[500px] text-center">
-     
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      ></div>
-
-     
-      <div className="relative z-10 flex flex-col justify-center items-center h-full px-4">
-        <h1 className="text-5xl md:text-6xl font-serif text-white font-bold drop-shadow-lg mb-4">
-          Welcome to Mithas Mahal
-        </h1>
-        <p className="text-lg md:text-2xl text-white drop-shadow-md mb-6">
-          Delicious sweets, savories & bakes crafted with love
-        </p>
-       
+        {/* <motion.button
+          className="bg-transparent border border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md text-sm sm:text-base hover:bg-[#9c7e38] transition"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          Shop Now
+        </motion.button> */}
       </div>
     </section>
   );
 };
+
 export default Hero;
-
-
-

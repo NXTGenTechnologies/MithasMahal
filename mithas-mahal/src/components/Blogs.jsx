@@ -23,13 +23,13 @@ const blogs = [
 
 const Blogs = () => {
   return (
-    <section className="py-16 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-10">Latest Blogs</h2>
+    <section className="py-16 bg-transparent">
+      <h2 className="text-3xl md:text-5xl lg:text-6xl text-gray-950 text-center mb-12">Latest Blogs</h2>
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         {blogs.map((blog) => (
           <div
             key={blog.id}
-            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+            className="bg-gray-100 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
           >
             <img
             src={blog.img}

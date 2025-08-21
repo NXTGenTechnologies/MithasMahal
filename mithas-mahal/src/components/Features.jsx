@@ -1,12 +1,50 @@
-import React from 'react';
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+
+const items = [
+  { src: "/images/high-quality.png", alt: "High Quality", label: "High Quality" },
+  { src: "/images/vegan.png", alt: "100% Vegetarian", label: "100% Vegetarian" },
+  { src: "/images/water.png", alt: "Hygienic", label: "Hygienic" },
+];
 
 const Features = () => {
   return (
-    <section className="flex justify-center gap-6 flex-wrap py-8">
-      <div className="bg-transparent p-4 font-bold">✔ High Quality</div>
-      <div className="bg-transparent p-4 font-bold">🌱 100% Vegetarian</div>
-      <div className="bg-transparent p-4 font-bold">🧼 Hygienic</div>
-    </section>
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        visible: {
+          transition: {
+            staggerChildren: 0.2,
+          },
+        },
+      }}
+      viewport={{ once: true }}
+      className="flex justify-center gap-6 sm:gap-10 flex-wrap mt-8 px-4"
+    >
+      {items.map((item, index) => (
+        <motion.div
+          key={index}
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left"
+        >
+          <img
+            src={item.src}
+            alt={item.alt}
+            className="w-10 h-10 sm:w-14 sm:h-14"
+          />
+          <h3 className="text-md sm:text-xl md:text-2xl font-medium">
+            {item.label}
+          </h3>
+        </motion.div>
+      ))}
+    </motion.section>
   );
 };
 

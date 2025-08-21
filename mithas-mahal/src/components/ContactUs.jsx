@@ -16,9 +16,9 @@ const fadeInUp = {
   }),
 };
 
-const Contact = () => {
+const ContactUs = () => {
   return (
-    <section className="py-16 px-4 md:px-20 bg-transparent" id='contact'>
+    <section className="py-16 px-4 md:px-20 bg-transparent">
       <motion.div
         className="max-w-4xl mx-auto"
         initial="hidden"
@@ -83,4 +83,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactUs;

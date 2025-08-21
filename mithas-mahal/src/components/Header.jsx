@@ -12,7 +12,7 @@ const navItems = [
   { name: "Savouries", href: "/savouries" },
   { name: "Bakes", href: "/bakes" },
   { name: "About Us", href: "/aboutus" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Contact Us", href: "/contactus" },
 ];
 
 
@@ -44,19 +44,20 @@ const Header = () => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          <motion.a
-            to="/"
+          <motion.div
             className="flex items-center"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
+          <Link to="/">
             <img
               src="/logo.png"
               alt="Mithas Mahal"
               className="h-16 w-auto object-contain"
             />
-          </motion.a>
+            </Link>
+          </motion.div>
 
           
           <nav className="hidden md:flex space-x-8">

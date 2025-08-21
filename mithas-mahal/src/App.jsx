@@ -15,6 +15,7 @@ import Savouries from './components/Savouries';
 import Bakes from './components/Bakes';
 import Selection from './components/Selection';
 import Award from './components/Award';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -95,7 +96,7 @@ function App() {
        <Route path="/sweets" element={<Sweets />} />
         <Route path="/savouries" element={<Savouries />} />
         <Route path="/bakes" element={<Bakes />} />
-        <Route path="/contactus" element={<Contact />}/>
+        <Route path="/contactus" element={<ContactUs />}/>
 
             </Routes>
       <Selection />

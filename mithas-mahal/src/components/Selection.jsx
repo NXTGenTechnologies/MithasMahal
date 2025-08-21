@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle, Truck, Heart, Leaf } from "lucide-react"; // icons
+import { CheckCircle, Truck, Heart, Leaf } from "lucide-react";
 
 const Selection = () => {
   const features = [
@@ -26,9 +26,9 @@ const Selection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50 text-center">
+    <section className="py-16 bg-transparent text-center my-10">
       <h2 className="text-3xl font-bold text-gray-800 mb-12">
-        Why Choose <span className="text-amber-600">Mithas Mahal</span>?
+        Why Choose <span className="text-[#9c7e38]">Mithas Mahal</span>?
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-6">
         {features.map((f, index) => (

@@ -108,6 +108,13 @@ const sweetData = [
     image: "/images/sweets/mysorepak.webp",
     category: "Traditional Sweets",
   },
+  {
+    id: 16,
+    name: "Gulab Jamun",
+    price: 320,
+    image: "/images/sweets/gulabjamun.webp",
+    category: "All Sweets",
+  },
 ];
 
 const fadeUp = {
@@ -124,7 +131,7 @@ const categories = ["All Sweets", "Ghee Sweets", "Traditional Sweets", "Tea Time
 export default function Sweets() {
   const [selectedCategory, setSelectedCategory] = useState("All Sweets");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8;
+  const itemsPerPage = 12;
 
   const filteredSweets = sweetData.filter((item) =>
     selectedCategory === "All Sweets" ? true : item.category === selectedCategory
