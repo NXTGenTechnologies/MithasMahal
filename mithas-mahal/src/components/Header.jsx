@@ -1,20 +1,11 @@
 'use client';
 
 import { useState } from "react";
-import { FiMenu, FiX, FiSearch, FiUser, FiShoppingCart } from "react-icons/fi";
+import { FiMenu, FiX, } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
-
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Sweets", href: "/sweets" },
-  { name: "Savouries", href: "/savouries" },
-  { name: "Bakes", href: "/bakes" },
-  { name: "About Us", href: "/aboutus" },
-  { name: "Contact Us", href: "/contactus" },
-];
-
+const navItems = ["About Us", "Sweets", "Savouries", "Bakes", "Contact Us"];
 
 const itemVariants = {
   hidden: { opacity: 0, y: -10 },
@@ -27,20 +18,9 @@ const itemVariants = {
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   const handleScroll = (e, href) => {
-    if (href.includes("#")) {
-      e.preventDefault();
-      const id = href.split("#")[1];
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-      setIsMenuOpen(false);
-    }
-  };
 
   return (
-    <header className="bg-transparent border-b border-[#9c7e38] top-0 z-50">
+    <header className="bg-transparent border-b border-[#9c7e38] shadow-sm top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
@@ -50,17 +30,19 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-          <Link to="/">
+          <Link to="/" className="flex items-center">
             <img
               src="/logo.png"
               alt="Mithas Mahal"
               className="h-16 w-auto object-contain"
-            />
-            </Link>
+            /></Link>
           </motion.div>
 
           
           <nav className="hidden md:flex space-x-8">
+              <Link to="/" className="text-neutral-900 active:text-amber-800 hover:text-[#9c7e38] transition">
+                Home
+              </Link>
             {navItems.map((item, index) => (
               <motion.div
                 key={index}
@@ -69,26 +51,16 @@ const Header = () => {
                 animate="visible"
                 variants={itemVariants}
               >
-                  {item.href.startsWith("/") && !item.href.includes("#") ? (
-                  <Link
-                    to={item.href}
-                    className="text-neutral-900 hover:text-[#9c7e38] transition"
-                  >
-                    {item.name}
-                  </Link>
-                ) : (
-                  <a
-                    href={item.href}
-                    onClick={(e) => handleScroll(e, item.href)}
-                    className="text-neutral-900 hover:text-[#9c7e38] transition cursor-pointer"
-                  >
-                    {item.name}
-                  </a>
-                )}
+                <Link
+                  to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
+                  className="text-neutral-900 active:text-amber-800 hover:text-[#9c7e38] transition"
+                >
+                  {item}
+                </Link>
               </motion.div>
             ))}
           </nav>
-         
+
           <button
             className="md:hidden text-gray-900"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -109,30 +81,23 @@ const Header = () => {
             transition={{ duration: 0.3 }}
           >
             <nav className="flex flex-col space-y-4">
-              {["Home", "About Us", "Sweets", "Shop", "Contact Us"].map((item, index) => (
+              <Link to="/" className="text-neutral-900 active:text-amber-800 hover:text-[#9c7e38] transition">
+                Home
+              </Link>
+              {["About Us", "Sweets", "Savouries", "Bakes", "Contact Us"].map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
-                    {item.href.startsWith("/") && !item.href.includes("#") ? (
-                    <Link
-                      to={item.href}
-                      className="text-gray-900 hover:text-[#9c7e38] font-medium"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ) : (
-                    <a
-                      href={item.href}
-                      onClick={(e) => handleScroll(e, item.href)}
-                      className="text-gray-900 hover:text-[#9c7e38] font-medium cursor-pointer"
-                    >
-                      {item.name}
-                    </a>
-                  )}
+                  <Link
+                    to={`/${item.toLowerCase().replace(/\s+/g, "")}`}
+                    className="text-gray-900 hover:text-[#9c7e38]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item}
+                  </Link>
                 </motion.div>
               ))}
             </nav>
